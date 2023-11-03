@@ -1,5 +1,12 @@
-const contact = () => {
-    return <div>contact</div>;
+import Navbar from './components/Navbar';
+
+const about = () => {
+    return (
+        <>
+            <Navbar />
+            <h1>Ini halaman Contact</h1>
+        </>
+    );
 };
 
-export default contact;
+export default about;
