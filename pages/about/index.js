@@ -1,6 +1,7 @@
 import Head from 'next/head';
-import Navbar from './components/Navbar';
+import Navbar from '../components/Navbar';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const about = ({ data }) => {
     return (
@@ -14,7 +15,9 @@ const about = ({ data }) => {
             <h1>Ini halaman About</h1>
             {data.map((item) => (
                 <div key={item.id}>
+                    <Link href={`/about/` +item.id}>
                     <h2>{item.name}</h2>
+                    </Link>
                 </div>
             ))}
         </>
